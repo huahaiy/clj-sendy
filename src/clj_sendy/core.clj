@@ -22,14 +22,14 @@
   (client/post 
    (str (env :sendy-url) "/api/subscribers/subscription-status.php")
    {:form-params 
-    {:email email :list_id list-id :api_key (env :api-key)}}))
+    {:email email :list_id list-id :api_key (env :sendy-api-key)}}))
 
 (defn subscriber-count
   [list-id]
   (client/post 
    (str (env :sendy-url) "/api/subscribers/active-subscriber-count.php")
    {:form-params 
-    {:list_id list-id :api_key (env :api-key)}}))
+    {:list_id list-id :api_key (env :sendy-api-key)}}))
 
 (defn campaign
   "list-ids is a comma separated string. If send? is false, only campaign draft
@@ -39,7 +39,7 @@
   (client/post 
    (str (env :sendy-url) "/api/campaigns/create.php")
    {:form-params 
-    {:api_key (env :api-key) 
+    {:api_key (env :sendy-api-key) 
      :from_name from-name :from_email from-email
      :reply_to reply-to :subject subject :plain_text plain-text
      :html_text html-text 

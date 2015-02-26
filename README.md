@@ -5,4 +5,4 @@
 Configurations are expected to be in the following enviornment variables:
 
 - `SENDY_URL` is the base URL of the sendy installation, without the trailing "/"
-- `API_KEY` is the Sendy API key.
+- `SENDY_API_KEY` is the Sendy API key.
