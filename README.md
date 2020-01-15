@@ -11,4 +11,4 @@ Configurations are expected to be in the following enviornment variables:
 
 clj-sendy is available from Clojars:
 
-[clj-sendy "0.1.3"]
+[clj-sendy "0.2.0"]
