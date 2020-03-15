@@ -1,4 +1,4 @@
-(defproject clj-sendy "0.2.0"
+(defproject clj-sendy "0.2.1"
   :description "Thin Clojure layer on top of Sendy"
   :url "https://github.com/huahaiy/clj-sendy"
   :license {:name "Eclipse Public License - v 1.0"

@@ -6,15 +6,17 @@
 (def sendy-url (env :sendy-url))
 
 (defn subscribe
-  [email list-id & opts]
-  (client/post
-   (str sendy-url "/subscribe")
-   {:form-params
-    (let [params {:api_key api-key
-                  :email   email
-                  :list    list-id
-                  :boolean true}]
-      (if (seq opts) (merge params opts) params))}))
+  ([email list-id]
+   (subscribe email list-id {}))
+  ([email list-id opts]
+   (client/post
+    (str sendy-url "/subscribe")
+    {:form-params
+     (let [params {:api_key api-key
+                   :email   email
+                   :list    list-id
+                   :boolean true}]
+       (merge params opts))})))
 
 (defn unsubscribe
   [email list-id]
